@@ -509,15 +509,52 @@
     SEÇÃO CONTATO
     ======================================== */
 
+    /* ========================================
+   AJUSTES PARA CARDS COM MÚLTIPLOS LINKS (WHATSAPP)
+   ======================================== */
+
+div.contato-card {
+    /* Como o cartão inteiro não é mais um link, o cursor volta ao normal para o fundo */
+    cursor: default; 
+}
+
+.contato-info {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contato-info:last-child {
+    margin-bottom: 0; /* Tira a margem do último para não empurrar a caixa para baixo */
+}
+
+.contato-info p {
+    margin-bottom: 4px; /* Deixa o nome mais coladinho com o link de clicar */
+}
+
+.contato-info .contato-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: var(--transicao);
+}
+
+.contato-info .contato-link:hover {
+    color: var(--verde-primario);
+    transform: translateY(-2px);
+}
+    
+    
+    
     .contato {
         background: var(--bg-secundario);
     }
 
+    
     .contato-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 30px;
     }
+    
 
     .contato-card {
         background: var(--bg-card);
